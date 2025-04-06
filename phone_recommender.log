@@ -460,3 +460,6 @@ message: "API key not valid. Please pass a valid API key."
 2025-04-06 22:26:23,801 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
 2025-04-06 22:26:25,946 - INFO -  * Restarting with stat
 2025-04-06 22:27:42,353 - INFO -  * Restarting with stat
+2025-04-06 22:28:04,532 - INFO -  * Restarting with stat
+2025-04-06 22:28:05,464 - WARNING -  * Debugger is active!
+2025-04-06 22:28:05,466 - INFO -  * Debugger PIN: 332-981-049
