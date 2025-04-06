@@ -1,0 +1,462 @@
+2025-04-06 19:30:45,346 - WARNING -  * Debugger is active!
+2025-04-06 19:30:45,346 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 19:33:34,839 - INFO - Generated query: smartphones under 20000 oppo,poco,realme 8 RAM 256 ROM amoled
+2025-04-06 19:33:34,839 - INFO - Scraping Flipkart with query: smartphones under 20000 oppo,poco,realme 8 RAM 256 ROM amoled, attempt 1
+2025-04-06 19:33:36,521 - WARNING - No phone cards found, possibly blocked or structure changed
+2025-04-06 19:33:36,522 - INFO - Scraping Flipkart with query: smartphones under 20000 oppo,poco,realme 8 RAM 256 ROM amoled, attempt 2
+2025-04-06 19:33:37,145 - WARNING - No phone cards found, possibly blocked or structure changed
+2025-04-06 19:33:37,145 - INFO - Scraping Flipkart with query: smartphones under 20000 oppo,poco,realme 8 RAM 256 ROM amoled, attempt 3
+2025-04-06 19:33:39,050 - WARNING - No phone cards found, possibly blocked or structure changed
+2025-04-06 19:33:39,109 - INFO - 127.0.0.1 - - [06/Apr/2025 19:33:39] "POST / HTTP/1.1" 200 -
+2025-04-06 19:34:19,576 - INFO - Generated query: smartphones under 20000 Realme 8 GB RAM 256 GB ROM MediaTek 64 MP AMOLED
+2025-04-06 19:34:19,576 - INFO - Scraping Flipkart with query: smartphones under 20000 Realme 8 GB RAM 256 GB ROM MediaTek 64 MP AMOLED, attempt 1
+2025-04-06 19:34:21,177 - WARNING - No phone cards found, possibly blocked or structure changed
+2025-04-06 19:34:21,177 - INFO - Scraping Flipkart with query: smartphones under 20000 Realme 8 GB RAM 256 GB ROM MediaTek 64 MP AMOLED, attempt 2
+2025-04-06 19:34:22,102 - WARNING - No phone cards found, possibly blocked or structure changed
+2025-04-06 19:34:22,102 - INFO - Scraping Flipkart with query: smartphones under 20000 Realme 8 GB RAM 256 GB ROM MediaTek 64 MP AMOLED, attempt 3
+2025-04-06 19:34:23,595 - WARNING - No phone cards found, possibly blocked or structure changed
+2025-04-06 19:34:23,595 - INFO - 127.0.0.1 - - [06/Apr/2025 19:34:23] "POST / HTTP/1.1" 200 -
+2025-04-06 19:41:21,880 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 19:43:08,834 - ERROR - GEMINI_API_KEY not set in environment variables
+2025-04-06 19:44:26,354 - ERROR - GEMINI_API_KEY not set in environment variables
+2025-04-06 19:46:30,453 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 19:46:30,454 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 19:46:30,455 - INFO -  * Restarting with stat
+2025-04-06 19:46:31,297 - WARNING -  * Debugger is active!
+2025-04-06 19:46:31,299 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 19:46:41,354 - INFO - Generated query: smartphones under 20000 Realme 8 GB RAM 256 GB ROM MediaTek 64 MP AMOLED
+2025-04-06 19:46:41,354 - INFO - ====== WebDriver manager ======
+2025-04-06 19:46:42,118 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-06 19:46:42,352 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-06 19:46:42,541 - INFO - There is no [win64] chromedriver "134.0.6998.165" for browser google-chrome "134.0.6998" in cache
+2025-04-06 19:46:42,541 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-06 19:46:42,984 - INFO - WebDriver version 134.0.6998.165 selected
+2025-04-06 19:46:42,984 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.165/win32/chromedriver-win32.zip
+2025-04-06 19:46:42,984 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.165/win32/chromedriver-win32.zip
+2025-04-06 19:46:43,431 - INFO - Driver downloading response is 200
+2025-04-06 19:46:45,359 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-06 19:46:46,429 - INFO - Driver has been saved in cache [C:\Users\rajes\.wdm\drivers\chromedriver\win64\134.0.6998.165]
+2025-04-06 19:46:48,077 - INFO - Scraping Flipkart with query: smartphones under 20000 Realme 8 GB RAM 256 GB ROM MediaTek 64 MP AMOLED
+2025-04-06 19:47:06,503 - ERROR - Scraping failed: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00E1C7F3+24435]
+	(No symbol) [0x00DA2074]
+	(No symbol) [0x00C706E3]
+	(No symbol) [0x00CB8B39]
+	(No symbol) [0x00CB8E8B]
+	(No symbol) [0x00D01AC2]
+	(No symbol) [0x00CDD804]
+	(No symbol) [0x00CFF20A]
+	(No symbol) [0x00CDD5B6]
+	(No symbol) [0x00CAC54F]
+	(No symbol) [0x00CAD894]
+	GetHandleVerifier [0x011270A3+3213347]
+	GetHandleVerifier [0x0113B0C9+3295305]
+	GetHandleVerifier [0x0113558C+3271948]
+	GetHandleVerifier [0x00EB7360+658144]
+	(No symbol) [0x00DAB27D]
+	(No symbol) [0x00DA8208]
+	(No symbol) [0x00DA83A9]
+	(No symbol) [0x00D9AAC0]
+	BaseThreadInitThunk [0x76805D49+25]
+	RtlInitializeExceptionChain [0x77BDCE3B+107]
+	RtlGetAppContainerNamedObjectPath [0x77BDCDC1+561]
+
+2025-04-06 19:47:08,641 - INFO - 127.0.0.1 - - [06/Apr/2025 19:47:08] "POST / HTTP/1.1" 200 -
+2025-04-06 19:47:26,271 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 19:47:26,271 - INFO - ====== WebDriver manager ======
+2025-04-06 19:47:26,990 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-06 19:47:27,283 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-06 19:47:27,680 - INFO - Driver [C:\Users\rajes\.wdm\drivers\chromedriver\win64\134.0.6998.165\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-06 19:47:28,823 - INFO - Scraping Flipkart with query: smartphones under 20000  RAM  ROM
+2025-04-06 19:47:48,612 - ERROR - Scraping failed: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00E1C7F3+24435]
+	(No symbol) [0x00DA2074]
+	(No symbol) [0x00C706E3]
+	(No symbol) [0x00CB8B39]
+	(No symbol) [0x00CB8E8B]
+	(No symbol) [0x00D01AC2]
+	(No symbol) [0x00CDD804]
+	(No symbol) [0x00CFF20A]
+	(No symbol) [0x00CDD5B6]
+	(No symbol) [0x00CAC54F]
+	(No symbol) [0x00CAD894]
+	GetHandleVerifier [0x011270A3+3213347]
+	GetHandleVerifier [0x0113B0C9+3295305]
+	GetHandleVerifier [0x0113558C+3271948]
+	GetHandleVerifier [0x00EB7360+658144]
+	(No symbol) [0x00DAB27D]
+	(No symbol) [0x00DA8208]
+	(No symbol) [0x00DA83A9]
+	(No symbol) [0x00D9AAC0]
+	BaseThreadInitThunk [0x76805D49+25]
+	RtlInitializeExceptionChain [0x77BDCE3B+107]
+	RtlGetAppContainerNamedObjectPath [0x77BDCDC1+561]
+
+2025-04-06 19:47:50,752 - INFO - 127.0.0.1 - - [06/Apr/2025 19:47:50] "POST / HTTP/1.1" 200 -
+2025-04-06 19:49:04,995 - INFO -  * Detected change in 'D:\\ai\\scrap.py', reloading
+2025-04-06 19:49:05,153 - INFO -  * Restarting with stat
+2025-04-06 19:49:06,111 - WARNING -  * Debugger is active!
+2025-04-06 19:49:06,114 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 20:11:54,565 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 20:11:54,572 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 20:11:54,572 - INFO -  * Restarting with stat
+2025-04-06 20:11:55,446 - WARNING -  * Debugger is active!
+2025-04-06 20:11:55,448 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 20:17:33,411 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 20:17:33,411 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 20:17:33,411 - INFO -  * Restarting with stat
+2025-04-06 20:17:34,197 - WARNING -  * Debugger is active!
+2025-04-06 20:17:34,197 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 20:17:48,772 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 20:17:48,772 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000++RAM++ROM&sort=price_asc
+2025-04-06 20:17:49,238 - INFO - 127.0.0.1 - - [06/Apr/2025 20:17:49] "POST / HTTP/1.1" 200 -
+2025-04-06 20:18:03,783 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 20:18:03,784 - INFO - 127.0.0.1 - - [06/Apr/2025 20:18:03] "POST / HTTP/1.1" 200 -
+2025-04-06 20:19:19,636 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 20:19:19,772 - INFO -  * Restarting with stat
+2025-04-06 20:19:20,662 - WARNING -  * Debugger is active!
+2025-04-06 20:19:20,662 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 20:19:24,984 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 20:19:24,985 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 20:19:24,986 - INFO -  * Restarting with stat
+2025-04-06 20:19:25,818 - WARNING -  * Debugger is active!
+2025-04-06 20:19:25,820 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 20:19:31,136 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 20:19:31,137 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000++RAM++ROM&sort=price_asc
+2025-04-06 20:19:40,360 - INFO - 127.0.0.1 - - [06/Apr/2025 20:19:40] "POST / HTTP/1.1" 200 -
+2025-04-06 20:19:55,882 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 20:20:02,109 - INFO - 127.0.0.1 - - [06/Apr/2025 20:20:02] "POST / HTTP/1.1" 200 -
+2025-04-06 20:22:58,715 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 20:23:00,826 - INFO -  * Restarting with stat
+2025-04-06 20:23:03,958 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 20:23:03,959 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 20:23:03,959 - INFO -  * Restarting with stat
+2025-04-06 20:23:04,820 - WARNING -  * Debugger is active!
+2025-04-06 20:23:04,820 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 20:23:09,660 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 20:23:09,660 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000++RAM++ROM&sort=price_asc
+2025-04-06 20:23:13,475 - INFO - 127.0.0.1 - - [06/Apr/2025 20:23:13] "POST / HTTP/1.1" 200 -
+2025-04-06 20:23:19,800 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 20:23:20,831 - INFO - 127.0.0.1 - - [06/Apr/2025 20:23:20] "POST / HTTP/1.1" 200 -
+2025-04-06 20:23:59,519 - INFO - Generated query: smartphones under 20000 Realme 8 GB RAM 256 GB ROM MediaTek 64 MP AMOLED
+2025-04-06 20:23:59,519 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000+Realme+8+GB+RAM+256+GB+ROM+MediaTek+64+MP+AMOLED&sort=price_asc
+2025-04-06 20:24:04,159 - INFO - 127.0.0.1 - - [06/Apr/2025 20:24:04] "POST / HTTP/1.1" 200 -
+2025-04-06 20:36:28,925 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 20:36:31,063 - INFO -  * Restarting with stat
+2025-04-06 20:41:08,065 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 20:41:08,065 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 20:41:08,067 - INFO -  * Restarting with stat
+2025-04-06 20:41:08,927 - WARNING -  * Debugger is active!
+2025-04-06 20:41:08,933 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 20:41:18,498 - INFO - Generated query: smartphones under 20000 Realme 8 GB RAM 256 GB ROM MediaTek 64 MP AMOLED
+2025-04-06 20:41:18,498 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000+Realme+8+GB+RAM+256+GB+ROM+MediaTek+64+MP+AMOLED&sort=price_asc
+2025-04-06 20:41:21,567 - ERROR - Gemini API call failed: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-04-06 20:41:21,602 - INFO - 127.0.0.1 - - [06/Apr/2025 20:41:21] "POST / HTTP/1.1" 200 -
+2025-04-06 20:41:45,882 - INFO - Generated query: smartphones under 20000 Realme 8 GB RAM  ROM
+2025-04-06 20:41:45,882 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000+Realme+8+GB+RAM++ROM&sort=price_asc
+2025-04-06 20:41:47,935 - ERROR - Gemini API call failed: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-04-06 20:41:47,935 - INFO - 127.0.0.1 - - [06/Apr/2025 20:41:47] "POST / HTTP/1.1" 200 -
+2025-04-06 20:42:23,991 - INFO - Generated query: smartphones under 20000 Realme  RAM  ROM
+2025-04-06 20:42:23,991 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000+Realme++RAM++ROM&sort=price_asc
+2025-04-06 20:42:26,650 - ERROR - Gemini API call failed: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-04-06 20:42:26,650 - INFO - 127.0.0.1 - - [06/Apr/2025 20:42:26] "POST / HTTP/1.1" 200 -
+2025-04-06 20:43:06,435 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 20:43:08,550 - INFO -  * Restarting with stat
+2025-04-06 20:43:09,580 - WARNING -  * Debugger is active!
+2025-04-06 20:43:09,583 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 20:43:11,599 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 20:43:11,721 - INFO -  * Restarting with stat
+2025-04-06 20:43:12,543 - WARNING -  * Debugger is active!
+2025-04-06 20:43:12,543 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 20:43:15,420 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 20:43:15,420 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 20:43:15,420 - INFO -  * Restarting with stat
+2025-04-06 20:43:16,288 - WARNING -  * Debugger is active!
+2025-04-06 20:43:16,296 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 20:43:22,614 - INFO - Generated query: smartphones under 20000 Realme  RAM  ROM
+2025-04-06 20:43:22,614 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000+Realme++RAM++ROM&sort=price_asc
+2025-04-06 20:43:30,320 - INFO - 127.0.0.1 - - [06/Apr/2025 20:43:30] "POST / HTTP/1.1" 200 -
+2025-04-06 20:43:50,232 - INFO - Generated query: smartphones under 20000 Realme  RAM  ROM
+2025-04-06 20:43:53,663 - INFO - 127.0.0.1 - - [06/Apr/2025 20:43:53] "POST / HTTP/1.1" 200 -
+2025-04-06 20:46:00,993 - INFO -  * Detected change in 'D:\\ai\\scrap.py', reloading
+2025-04-06 20:46:03,127 - INFO -  * Restarting with stat
+2025-04-06 21:02:40,333 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 21:02:40,334 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 21:02:40,335 - INFO -  * Restarting with stat
+2025-04-06 21:02:41,204 - WARNING -  * Debugger is active!
+2025-04-06 21:02:41,222 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:02:46,056 - INFO - Generated query: smartphones under 20000 Realme  RAM  ROM
+2025-04-06 21:02:46,056 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000+Realme++RAM++ROM&sort=price_asc
+2025-04-06 21:02:52,271 - INFO - 127.0.0.1 - - [06/Apr/2025 21:02:52] "POST / HTTP/1.1" 200 -
+2025-04-06 21:03:06,401 - INFO - Generated query: smartphones under 20000 Realme  RAM  ROM
+2025-04-06 21:03:11,099 - INFO - 127.0.0.1 - - [06/Apr/2025 21:03:11] "POST / HTTP/1.1" 200 -
+2025-04-06 21:05:15,891 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 21:05:20,368 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 21:05:20,368 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 21:05:20,372 - INFO -  * Restarting with stat
+2025-04-06 21:05:21,202 - WARNING -  * Debugger is active!
+2025-04-06 21:05:21,202 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:05:45,837 - INFO - Generated query: smartphones under 20000 Realme  RAM  ROM
+2025-04-06 21:05:45,837 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000+Realme++RAM++ROM&sort=price_asc
+2025-04-06 21:05:53,955 - INFO - 127.0.0.1 - - [06/Apr/2025 21:05:53] "POST / HTTP/1.1" 200 -
+2025-04-06 21:13:15,915 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 21:13:21,684 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 21:13:21,684 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 21:13:21,686 - INFO -  * Restarting with stat
+2025-04-06 21:13:22,586 - WARNING -  * Debugger is active!
+2025-04-06 21:13:22,593 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:13:34,563 - INFO - 127.0.0.1 - - [06/Apr/2025 21:13:34] "GET / HTTP/1.1" 200 -
+2025-04-06 21:13:36,677 - INFO - 127.0.0.1 - - [06/Apr/2025 21:13:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-06 21:13:56,849 - INFO - Generated query: smartphones under 20000 Realme 8 GB RAM 256 GB ROM
+2025-04-06 21:13:56,849 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000+Realme+8+GB+RAM+256+GB+ROM&sort=price_asc
+2025-04-06 21:14:03,219 - INFO - 127.0.0.1 - - [06/Apr/2025 21:14:03] "POST / HTTP/1.1" 200 -
+2025-04-06 21:18:12,814 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 21:18:14,967 - INFO -  * Restarting with stat
+2025-04-06 21:18:15,939 - WARNING -  * Debugger is active!
+2025-04-06 21:18:15,955 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:20:44,621 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 21:20:44,754 - INFO -  * Restarting with stat
+2025-04-06 21:20:45,694 - WARNING -  * Debugger is active!
+2025-04-06 21:20:45,694 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:21:43,905 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 21:21:44,029 - INFO -  * Restarting with stat
+2025-04-06 21:21:44,952 - WARNING -  * Debugger is active!
+2025-04-06 21:21:44,953 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:21:50,060 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 21:21:50,060 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 21:21:50,061 - INFO -  * Restarting with stat
+2025-04-06 21:21:50,948 - WARNING -  * Debugger is active!
+2025-04-06 21:21:50,951 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:22:05,907 - INFO - Generated query: smartphones under 20000 Realme  RAM  ROM
+2025-04-06 21:22:05,907 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000+Realme++RAM++ROM&sort=price_asc
+2025-04-06 21:22:09,993 - INFO - 127.0.0.1 - - [06/Apr/2025 21:22:09] "POST / HTTP/1.1" 200 -
+2025-04-06 21:24:44,676 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 21:24:46,813 - INFO -  * Restarting with stat
+2025-04-06 21:24:55,980 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 21:24:55,980 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 21:24:55,980 - INFO -  * Restarting with stat
+2025-04-06 21:24:56,903 - WARNING -  * Debugger is active!
+2025-04-06 21:24:56,903 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:25:14,397 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 21:25:14,397 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000++RAM++ROM&sort=price_asc
+2025-04-06 21:25:20,340 - INFO - 127.0.0.1 - - [06/Apr/2025 21:25:20] "POST / HTTP/1.1" 200 -
+2025-04-06 21:29:44,133 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 21:29:46,250 - INFO -  * Restarting with stat
+2025-04-06 21:29:47,144 - WARNING -  * Debugger is active!
+2025-04-06 21:29:47,144 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:29:49,167 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 21:29:49,286 - INFO -  * Restarting with stat
+2025-04-06 21:29:50,136 - WARNING -  * Debugger is active!
+2025-04-06 21:29:50,144 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:30:09,804 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 21:30:09,805 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000++RAM++ROM&sort=price_asc
+2025-04-06 21:30:16,827 - INFO - 127.0.0.1 - - [06/Apr/2025 21:30:16] "POST / HTTP/1.1" 200 -
+2025-04-06 21:34:26,633 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 21:34:32,511 - INFO - 127.0.0.1 - - [06/Apr/2025 21:34:32] "POST / HTTP/1.1" 200 -
+2025-04-06 21:35:03,076 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 21:35:08,637 - INFO - 127.0.0.1 - - [06/Apr/2025 21:35:08] "POST / HTTP/1.1" 200 -
+2025-04-06 21:39:11,482 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 21:39:13,626 - INFO -  * Restarting with stat
+2025-04-06 21:39:14,466 - WARNING -  * Debugger is active!
+2025-04-06 21:39:14,482 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:39:18,868 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 21:39:18,868 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 21:39:18,868 - INFO -  * Restarting with stat
+2025-04-06 21:39:19,754 - WARNING -  * Debugger is active!
+2025-04-06 21:39:19,755 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:39:35,696 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 21:39:35,697 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000++RAM++ROM&sort=price_asc
+2025-04-06 21:39:43,488 - INFO - 127.0.0.1 - - [06/Apr/2025 21:39:43] "POST / HTTP/1.1" 200 -
+2025-04-06 21:41:33,636 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 21:41:38,231 - INFO - 127.0.0.1 - - [06/Apr/2025 21:41:38] "POST / HTTP/1.1" 200 -
+2025-04-06 21:43:49,788 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 21:43:51,910 - INFO -  * Restarting with stat
+2025-04-06 21:43:53,057 - WARNING -  * Debugger is active!
+2025-04-06 21:43:53,060 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:44:08,134 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 21:44:08,264 - INFO -  * Restarting with stat
+2025-04-06 21:44:09,146 - WARNING -  * Debugger is active!
+2025-04-06 21:44:09,146 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:44:12,144 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 21:44:12,144 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 21:44:12,146 - INFO -  * Restarting with stat
+2025-04-06 21:44:12,993 - WARNING -  * Debugger is active!
+2025-04-06 21:44:12,993 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:44:21,098 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 21:44:21,099 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000++RAM++ROM&sort=price_asc
+2025-04-06 21:44:28,286 - INFO - 127.0.0.1 - - [06/Apr/2025 21:44:28] "POST / HTTP/1.1" 200 -
+2025-04-06 21:47:15,281 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 21:47:20,775 - INFO - 127.0.0.1 - - [06/Apr/2025 21:47:20] "POST / HTTP/1.1" 200 -
+2025-04-06 21:51:00,710 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 21:51:02,842 - INFO -  * Restarting with stat
+2025-04-06 21:51:03,719 - WARNING -  * Debugger is active!
+2025-04-06 21:51:03,719 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:51:08,097 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 21:51:08,097 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 21:51:08,099 - INFO -  * Restarting with stat
+2025-04-06 21:51:08,967 - WARNING -  * Debugger is active!
+2025-04-06 21:51:08,967 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:51:25,636 - INFO - Generated query: smartphones under 20000 Realme  RAM  ROM
+2025-04-06 21:51:25,636 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000+Realme++RAM++ROM&sort=price_asc
+2025-04-06 21:51:26,003 - INFO - 127.0.0.1 - - [06/Apr/2025 21:51:26] "POST / HTTP/1.1" 200 -
+2025-04-06 21:52:14,240 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 21:52:14,371 - INFO -  * Restarting with stat
+2025-04-06 21:52:16,890 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 21:52:16,890 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 21:52:16,890 - INFO -  * Restarting with stat
+2025-04-06 21:52:17,745 - WARNING -  * Debugger is active!
+2025-04-06 21:52:17,752 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:52:36,160 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 21:52:36,161 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000++RAM++ROM&sort=price_asc
+2025-04-06 21:52:44,096 - INFO - 127.0.0.1 - - [06/Apr/2025 21:52:44] "POST / HTTP/1.1" 200 -
+2025-04-06 21:56:41,696 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 21:56:45,963 - INFO - 127.0.0.1 - - [06/Apr/2025 21:56:45] "POST / HTTP/1.1" 200 -
+2025-04-06 21:57:15,579 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 21:57:15,580 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 21:57:15,581 - INFO -  * Restarting with stat
+2025-04-06 21:57:16,487 - WARNING -  * Debugger is active!
+2025-04-06 21:57:16,487 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 21:57:37,727 - INFO - 127.0.0.1 - - [06/Apr/2025 21:57:37] "GET / HTTP/1.1" 200 -
+2025-04-06 21:57:51,112 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 21:57:51,112 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000++RAM++ROM&sort=price_asc
+2025-04-06 21:58:03,566 - INFO - 127.0.0.1 - - [06/Apr/2025 21:58:03] "POST / HTTP/1.1" 200 -
+2025-04-06 22:03:01,561 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 22:03:08,148 - INFO - 127.0.0.1 - - [06/Apr/2025 22:03:08] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-04-06 22:03:08,208 - INFO - 127.0.0.1 - - [06/Apr/2025 22:03:08] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-06 22:03:08,227 - INFO - 127.0.0.1 - - [06/Apr/2025 22:03:08] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-06 22:03:08,606 - INFO - 127.0.0.1 - - [06/Apr/2025 22:03:08] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=uVBAdR2u6WCLusXOM6oR HTTP/1.1" 200 -
+2025-04-06 22:03:08,607 - INFO - 127.0.0.1 - - [06/Apr/2025 22:03:08] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-06 22:03:08,851 - INFO - 127.0.0.1 - - [06/Apr/2025 22:03:08] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-06 22:08:00,602 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 22:08:00,603 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 22:08:00,604 - INFO -  * Restarting with stat
+2025-04-06 22:08:01,553 - WARNING -  * Debugger is active!
+2025-04-06 22:08:01,553 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 22:08:08,753 - INFO - Generated query: smartphones under 20000  RAM  ROM
+2025-04-06 22:08:08,753 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000++RAM++ROM&sort=price_asc
+2025-04-06 22:08:16,576 - INFO - 127.0.0.1 - - [06/Apr/2025 22:08:16] "POST / HTTP/1.1" 200 -
+2025-04-06 22:08:16,884 - INFO - 127.0.0.1 - - [06/Apr/2025 22:08:16] "GET / HTTP/1.1" 200 -
+2025-04-06 22:08:22,515 - INFO - Generated query: smartphones under 20000 Samsung 8 GB RAM 128 GB ROM MediaTek 64 MP AMOLED
+2025-04-06 22:08:22,515 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000+Samsung+8+GB+RAM+128+GB+ROM+MediaTek+64+MP+AMOLED&sort=price_asc
+2025-04-06 22:08:28,671 - INFO - 127.0.0.1 - - [06/Apr/2025 22:08:28] "POST / HTTP/1.1" 200 -
+2025-04-06 22:14:47,356 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 22:14:49,495 - INFO -  * Restarting with stat
+2025-04-06 22:14:50,595 - WARNING -  * Debugger is active!
+2025-04-06 22:14:50,599 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 22:15:03,474 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 22:15:03,474 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 22:15:03,475 - INFO -  * Restarting with stat
+2025-04-06 22:15:04,323 - WARNING -  * Debugger is active!
+2025-04-06 22:15:04,326 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 22:15:10,947 - INFO - Generated query: smartphones under 20000 Samsung 8 GB RAM 128 GB ROM MediaTek 64 MP AMOLED
+2025-04-06 22:15:10,947 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000+Samsung+8+GB+RAM+128+GB+ROM+MediaTek+64+MP+AMOLED&sort=price_asc
+2025-04-06 22:15:17,176 - INFO - 127.0.0.1 - - [06/Apr/2025 22:15:17] "POST / HTTP/1.1" 200 -
+2025-04-06 22:15:30,308 - INFO - Generated query: smartphones under 20000 Samsung 8 GB RAM 128 GB ROM MediaTek 64 MP AMOLED
+2025-04-06 22:15:33,818 - INFO - 127.0.0.1 - - [06/Apr/2025 22:15:33] "POST / HTTP/1.1" 200 -
+2025-04-06 22:15:54,707 - INFO - Generated query: smartphones under 20000 Realme 8 GB RAM 128 GB ROM MediaTek 64 MP AMOLED
+2025-04-06 22:15:54,707 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000+Realme+8+GB+RAM+128+GB+ROM+MediaTek+64+MP+AMOLED&sort=price_asc
+2025-04-06 22:15:58,769 - INFO - 127.0.0.1 - - [06/Apr/2025 22:15:58] "POST / HTTP/1.1" 200 -
+2025-04-06 22:19:25,500 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 22:19:30,236 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.250:5000
+2025-04-06 22:19:30,236 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 22:19:30,237 - INFO -  * Restarting with stat
+2025-04-06 22:19:31,056 - WARNING -  * Debugger is active!
+2025-04-06 22:19:31,063 - INFO -  * Debugger PIN: 332-981-049
+2025-04-06 22:19:43,391 - INFO - Generated query: smartphones under 20000 Samsung 8 GB RAM 128 GB ROM MediaTek 64 MP AMOLED
+2025-04-06 22:19:43,392 - INFO - Fetching URL: https://www.flipkart.com/search?q=smartphones+under+20000+Samsung+8+GB+RAM+128+GB+ROM+MediaTek+64+MP+AMOLED&sort=price_asc
+2025-04-06 22:19:48,713 - INFO - 127.0.0.1 - - [06/Apr/2025 22:19:48] "POST / HTTP/1.1" 200 -
+2025-04-06 22:22:00,185 - INFO - Generated query: smartphones under 20000 Samsung 8 GB RAM 128 GB ROM MediaTek 64 MP AMOLED
+2025-04-06 22:22:03,467 - INFO - 127.0.0.1 - - [06/Apr/2025 22:22:03] "POST / HTTP/1.1" 200 -
+2025-04-06 22:22:55,694 - INFO - Generated query: smartphones under 20000 Samsung 8 GB RAM 128 GB ROM MediaTek 64 MP AMOLED
+2025-04-06 22:22:58,700 - INFO - 127.0.0.1 - - [06/Apr/2025 22:22:58] "POST / HTTP/1.1" 200 -
+2025-04-06 22:24:04,920 - INFO - Generated query: smartphones under 20000 Samsung 8 GB RAM 128 GB ROM MediaTek 64 MP AMOLED
+2025-04-06 22:24:09,208 - INFO - 127.0.0.1 - - [06/Apr/2025 22:24:09] "POST / HTTP/1.1" 200 -
+2025-04-06 22:26:23,801 - INFO -  * Detected change in 'D:\\ai\\app.py', reloading
+2025-04-06 22:26:25,946 - INFO -  * Restarting with stat
+2025-04-06 22:27:42,353 - INFO -  * Restarting with stat

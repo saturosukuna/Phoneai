@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phone Recommender</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="w-full mx-auto bg-white p-8 rounded-xl shadow-md">
+    <h1 class="text-3xl font-bold mb-6 text-center">Phone Recommendation System</h1>
+    
+    <form method="POST" class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <!-- Age -->
+        <div class="flex flex-col">
+          <label class="mb-1 text-gray-700">Age <span class="text-red-500">*</span></label>
+          <input type="number" name="age" placeholder="Your Age" min="10" max="100" required class="p-2 border rounded w-full">
+        </div>
+      
+        <!-- Gender -->
+        <div class="flex flex-col">
+          <label class="mb-1 text-gray-700">Gender <span class="text-red-500">*</span></label>
+          <select name="gender" required class="p-2 border rounded w-full">
+            <option value="">Select Gender</option>
+            <option value="male" selected>Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      
+        <!-- Budget -->
+        <div class="flex flex-col">
+          <label class="mb-1 text-gray-700">Budget <span class="text-red-500">*</span></label>
+          <select name="budget" required class="p-2 border rounded w-full">
+            <option value="">Select Budget</option>
+            <option value="10000">Under ₹10,000</option>
+            <option value="15000">Under ₹15,000</option>
+            <option value="20000" selected>Under ₹20,000</option>
+            <option value="30000">Under ₹30,000</option>
+            <option value="50000">Under ₹50,000</option>
+            <option value="100000">Above ₹50,000</option>
+          </select>
+        </div>
+      
+        <!-- Usage -->
+        <div class="flex flex-col">
+          <label class="mb-1 text-gray-700">Main Usage <span class="text-red-500">*</span></label>
+          <select name="usage" required class="p-2 border rounded w-full">
+            <option value="">Select Main Usage</option>
+            <option value="gaming">Gaming</option>
+            <option value="photography" selected>Photography</option>
+            <option value="business">Business Use</option>
+            <option value="social">Social Media & Entertainment</option>
+            <option value="general">General Everyday Use</option>
+          </select>
+        </div>
+      
+        <!-- Preferred Brand -->
+        <div class="flex flex-col">
+          <label class="mb-1 text-gray-700">Preferred Brand</label>
+          <select name="brands" class="p-2 border rounded w-full">
+            <option value="">Any Brand</option>
+            <option value="Samsung" selected>Samsung</option>
+            <option value="Realme">Realme</option>
+            <option value="Redmi">Redmi</option>
+            <option value="iQOO">iQOO</option>
+            <option value="Motorola">Motorola</option>
+            <option value="Nothing">Nothing</option>
+          </select>
+        </div>
+      
+        <!-- RAM -->
+        <div class="flex flex-col">
+          <label class="mb-1 text-gray-700">RAM Size</label>
+          <select name="ram" class="p-2 border rounded w-full">
+            <option value="">Any RAM</option>
+            <option value="4 GB">4 GB</option>
+            <option value="6 GB">6 GB</option>
+            <option value="8 GB" selected>8 GB</option>
+            <option value="12 GB">12 GB</option>
+            <option value="16 GB">16 GB</option>
+          </select>
+        </div>
+      
+        <!-- ROM -->
+        <div class="flex flex-col">
+          <label class="mb-1 text-gray-700">Storage (ROM)</label>
+          <select name="rom" class="p-2 border rounded w-full">
+            <option value="">Any Storage</option>
+            <option value="64 GB">64 GB</option>
+            <option value="128 GB" selected>128 GB</option>
+            <option value="256 GB">256 GB</option>
+            <option value="512 GB">512 GB</option>
+            <option value="1 TB">1 TB</option>
+          </select>
+        </div>
+      
+        <!-- Camera -->
+        <div class="flex flex-col">
+          <label class="mb-1 text-gray-700">Camera Quality</label>
+          <select name="camera" class="p-2 border rounded w-full">
+            <option value="">Any Camera</option>
+            <option value="13 MP">13 MP (Basic)</option>
+            <option value="48 MP">48 MP (Good)</option>
+            <option value="64 MP" selected>64 MP (Excellent)</option>
+            <option value="108 MP">108 MP (Premium)</option>
+          </select>
+        </div>
+      
+        <!-- Processor -->
+        <div class="flex flex-col">
+          <label class="mb-1 text-gray-700">Preferred Processor</label>
+          <select name="processor" class="p-2 border rounded w-full">
+            <option value="">Any Processor</option>
+            <option value="Snapdragon">Snapdragon</option>
+            <option value="MediaTek" selected>MediaTek</option>
+            <option value="Exynos">Exynos</option>
+            <option value="Apple Bionic">Apple Bionic</option>
+            <option value="Google Tensor">Google Tensor</option>
+          </select>
+        </div>
+      
+        <!-- Display -->
+        <div class="flex flex-col">
+          <label class="mb-1 text-gray-700">Display Type</label>
+          <select name="display" class="p-2 border rounded w-full">
+            <option value="">Any Display</option>
+            <option value="AMOLED" selected>AMOLED</option>
+            <option value="Super AMOLED">Super AMOLED</option>
+            <option value="LCD">LCD</option>
+            <option value="OLED">OLED</option>
+            <option value="IPS">IPS</option>
+          </select>
+        </div>
+      
+        <!-- Battery -->
+        <div class="flex flex-col">
+          <label class="mb-1 text-gray-700">Battery Requirement</label>
+          <select name="battery" class="p-2 border rounded w-full">
+            <option value="">Any Battery</option>
+            <option value="4000 mAh">Around 4000mAh</option>
+            <option value="5000 mAh" selected>5000mAh</option>
+            <option value="6000 mAh">6000mAh</option>
+            <option value="7000 mAh">7000mAh</option>
+            <option value="long">Long-lasting (any capacity)</option>
+          </select>
+        </div>
+      
+        <!-- IR -->
+        <div class="flex flex-col">
+          <label class="mb-1 text-gray-700">IR Blaster</label>
+          <select name="ir" class="p-2 border rounded w-full">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+      
+        <!-- NFC -->
+        <div class="flex flex-col">
+          <label class="mb-1 text-gray-700">NFC Support</label>
+          <select name="nfc" class="p-2 border rounded w-full">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+      
+        <!-- Submit Button (Spans Full Width) -->
+        <div class="col-span-1 md:col-span-2">
+          <button type="submit" id="submitBtn" class="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700 transition-all">Get Recommendations</button>
+        </div>
+      </form>
+      
+
+    <div id="loading" class="hidden text-center mt-4 text-gray-600">Loading recommendations...</div>
+    <div id="error" class="hidden text-red-500 mt-4 text-center"></div>
+
+    {% if result %}
+    <div class="flex flex-col md:flex-row mt-8 gap-6">
+      <div class="w-full md:w-[70%]">
+        <h2 class="text-xl font-semibold mb-4">📱 Available Phones</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {% for phone in phones %}
+          <div class="bg-white p-4 rounded shadow">
+            <img src="{{ phone.image }}" alt="{{ phone.title }}" class="h-48 w-full object-contain mb-2">
+            <h3 class="font-bold">{{ phone.title }}</h3>
+            <p class="text-green-600 font-semibold">₹{{ phone.price }}</p>
+            <ul class="text-sm text-gray-700 my-2 list-disc ml-4">
+              {% for spec in phone.specs %}
+              <li>{{ spec }}</li>
+              {% endfor %}
+            </ul>
+            <a href="{{ phone.url }}" target="_blank" class="text-blue-500 underline">View on Flipkart</a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="w-full md:w-[30%] p-4 bg-white border rounded shadow-inner overflow-y-auto max-h-[600px]">
+        <h2 class="text-xl font-semibold mb-4">🤖 Rajesh AI Recommendations</h2>
+        <div class="space-y-2 text-sm leading-relaxed text-gray-700">
+          {{ result|safe }}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function () {
+      const submitBtn = document.getElementById('submitBtn');
+      const loading = document.getElementById('loading');
+      const error = document.getElementById('error');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Processing...';
+      loading.classList.remove('hidden');
+      error.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
