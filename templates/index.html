@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flipkart Phone Recommender</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <div class="max-w-7xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4">📱 Flipkart Phone Recommender</h1>
+    <form method="POST" class="mb-6 flex gap-2">
+      <input name="query" type="text" value="{{ query }}" class="p-2 border rounded w-full" placeholder="Search for a phone (e.g., iPhone 14, Redmi)">
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Search</button>
+    </form>
+    <!-- Add this after your Search form and before the Recommend button -->
+<div class="mb-6">
+  <label for="preference" class="block font-medium mb-1">What are you looking for, Enter preference and press gemin recormmendation button?</label>
+  <input id="preference" type="text" placeholder="e.g., I want something cheap and reliable"
+         class="w-full p-2 border rounded" />
+</div>
+
+<!-- Recommend Button -->
+<button onclick="recommend()" class="mt-4 bg-green-600 text-white px-6 py-3 rounded shadow hover:bg-green-700">
+  🤖 Recommend from Gemini
+</button>
+
+    <div id="recommendation" class="bg-white p-4 rounded shadow mb-6 hidden"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for p in products %}
+      <div class="bg-white p-4 rounded shadow">
+        <img src="{{ p.image }}" alt="image" class="w-full h-52 object-contain mb-2">
+        <h2 class="text-lg font-bold mb-1">{{ p.title }}</h2>
+        <p class="text-green-700 font-semibold">{{ p.price }}</p>
+        <p class="text-gray-500 text-sm">{{ p.rating }} rating | {{ p.reviews }}</p>
+        <p class="text-sm text-gray-700 mt-2">{{ p.discount }}</p>
+        <ul class="text-sm mt-2 list-disc pl-5">
+          {% for spec in p.specifications[:5] %}
+            <li>{{ spec }}</li>
+          {% endfor %}
+        </ul>
+        <a href="{{ p.link }}" target="_blank" class="text-blue-600 underline text-sm mt-2 inline-block">View on Flipkart</a>
+      </div>
+      {% endfor %}
+    </div>
+
+    
+  </div>
+
+  <script>
+    
+  async function recommend() {
+    const resBox = document.getElementById("recommendation");
+    const products = {{ products | tojson }};
+    const preference = document.getElementById("preference").value;
+
+    resBox.classList.remove("hidden");
+    resBox.innerHTML = "<p class='text-gray-600'>Generating recommendations...</p>";
+
+    const res = await fetch("/recommend", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ products, preference })
+    });
+
+    const data = await res.json();
+    resBox.innerHTML = `<h2 class="text-xl font-bold mb-2">Gemini Recommends:</h2><pre class="whitespace-pre-wrap text-sm">${data.recommendation}</pre>`;
+  }
+</script>
+
+  </script>
+</body>
+</html>
