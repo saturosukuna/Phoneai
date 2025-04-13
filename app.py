@@ -1,126 +1,155 @@
-import requests
+from flask import Flask, render_template, request, jsonify
 from bs4 import BeautifulSoup
+import requests
+import google.generativeai as genai
+import os
+import re
 
-# # URL of the Flipkart page you want to scrape
-# url = "https://www.flipkart.com/search?q=fridege"
+app = Flask(__name__)
 
-# # Set up headers to mimic a browser request
-# headers = {
-#     "User-Agent": "Mozilla/5.0"
-# }
+# Configure Gemini API
+genai.configure(api_key=os.getenv("API_KEY"))
+model = genai.GenerativeModel('gemini-1.5-flash')
 
-# # Send a GET request to the page
-# response = requests.get(url, headers=headers)
 
-# # Check if the request was successful
-# if response.status_code == 200:
-#     soup = BeautifulSoup(response.text, "html.parser")
+def preprocess_markdown(text):
+    # Bold **text**
+    text = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", text)
 
-#     # Extracting all product containers
-#     product_containers = soup.find_all("div", {"class": "tUxRFH"})
+    # Headers: #, ##, ### to h1, h2, h3
+    text = re.sub(r"### (.*)", r"<h3>\1</h3>", text)
+    text = re.sub(r"## (.*)", r"<h2>\1</h2>", text)
+    text = re.sub(r"# (.*)", r"<h1>\1</h1>", text)
 
-#     # Extract details from each product container
-#     for product in product_containers:
-#         # Extract product link
-#         product_link = product.find("a", {"class": "CGtC98"})["href"] if product.find("a", {"class": "CGtC98"}) else "No Link"
+    # Bullet points: - item or * item
+    text = re.sub(r"(?m)^[\-\*] (.*)", r"<li>\1</li>", text)
+    if "<li>" in text:
+        text = "<ul>" + text + "</ul>"
 
-#         # Extract product image
-#         product_image = product.find("img", {"class": "DByuf4"})["src"] if product.find("img", {"class": "DByuf4"}) else "No Image"
+    # Numbered lists: 1. Item
+    text = re.sub(r"(?m)^\d+\.\s(.*)", r"<li>\1</li>", text)
+    if re.search(r"<li>.*</li>", text):
+        text = "<ol>" + text + "</ol>"
 
-#         # Extract product title
-#         product_title = product.find("div", {"class": "KzDlHZ"}).get_text() if product.find("div", {"class": "KzDlHZ"}) else "No Title"
+    # Line breaks
+    text = text.replace("\n", "<br>")
 
-#         # Extract product price
-#         product_price = product.find("div", {"class": "Nx9bqj"}).get_text() if product.find("div", {"class": "Nx9bqj"}) else "No Price"
+    return text
 
-#         # Extract product discount
-#         product_discount = product.find("div", {"class": "UkUFwK"}).get_text() if product.find("div", {"class": "UkUFwK"}) else "No Discount"
+def scrape_flipkart_products(query):
+    url = f"https://www.flipkart.com/search?q={query}"
+    headers = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(url, headers=headers)
 
-#         # Extract product ratings and reviews
-#         product_rating = product.find("span", {"class": "Y1HWO0"}).get_text() if product.find("span", {"class": "Y1HWO0"}) else "No Rating"
-#         product_reviews = product.find("span", {"class": "hG7V+4"}).get_text() if product.find("span", {"class": "hG7V+4"}) else "No Reviews"
+    if response.status_code != 200:
+        return []
 
-#         # Extract specifications
-#         product_specs = product.find("ul", {"class": "G4BRas"})
-#         specs_list = [li.get_text() for li in product_specs.find_all("li")] if product_specs else ["No Specifications"]
+    soup = BeautifulSoup(response.text, "html.parser")
 
-#         # Print the extracted details
-#         print("Product Title:", product_title)
-#         print("Product Link:", "https://www.flipkart.com" + product_link)
-#         print("Product Image:", product_image)
-#         print("Product Price:", product_price)
-#         print("Product Discount:", product_discount)
-#         print("Product Rating:", product_rating)
-#         print("Product Reviews:", product_reviews)
-#         print("Specifications:")
-#         for spec in specs_list:
-#             print(f"  - {spec}")
-#         print("-" * 40)
-# else:
-#     print("Failed to fetch page.")
-def fetch_products_from_flipkart(query: str, max_products: int = 20) -> List[Dict]:
-    url = f"https://www.flipkart.com/search?q={query.replace(' ', '+')}"
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
-    }
+    # Category-based scraping logic
+    query_lower = query.lower()
+    products_data = []
 
-    try:
-        logger.info(f"Fetching URL: {url}")
-        response = requests.get(url, headers=headers, timeout=10)
-        if response.status_code != 200:
-            logger.error(f"Failed to fetch page: Status {response.status_code}")
-            return []
-
-        soup = bs(response.text, "html.parser")
-        product_containers = soup.find_all("div", {"class": "tUxRFH"})
-
-        product_data = []
-        seen_titles = set()
-
+    # 📱📺 Electronics style cards
+    if any(keyword in query_lower for keyword in ["phone", "laptop", "tv", "fridge", "fan", "camera", "headphone", "monitor"]):
+        product_containers = soup.find_all("div", class_="tUxRFH")
         for product in product_containers:
-            title = product.find("div", {"class": "KzDlHZ"}).get_text() if product.find("div", {"class": "KzDlHZ"}) else "N/A"
-            if title in seen_titles:
-                continue
-            seen_titles.add(title)
+            product_link = product.find("a", class_="CGtC98")
+            product_image = product.find("img", class_="DByuf4")
+            product_title = product.find("div", class_="KzDlHZ")
+            product_price = product.find("div", class_="Nx9bqj")
+            product_discount = product.find("div", class_="UkUFwK")
+            product_rating = product.find("span", class_="Y1HWO0")
+            product_reviews = product.find("span", class_="hG7V+4")
+            product_specs = product.find("ul", class_="G4BRas")
 
-            product_link = product.find("a", {"class": "CGtC98"})["href"] if product.find("a", {"class": "CGtC98"}) else ""
-            full_link = f"https://www.flipkart.com{product_link}" if product_link else ""
-
-            product_image = product.find("img", {"class": "DByuf4"})["src"] if product.find("img", {"class": "DByuf4"}) else ""
-
-            price = 0
-            price_tag = product.find("div", {"class": "Nx9bqj"}) or product.find("div", {"class": "_30jeq3"})
-            if price_tag:
-                try:
-                    price = int(price_tag.text.replace('₹', '').replace(',', '').strip())
-                except:
-                    pass
-
-            discount = product.find("div", {"class": "UkUFwK"}).get_text() if product.find("div", {"class": "UkUFwK"}) else "No Discount"
-            rating = product.find("span", {"class": "Y1HWO0"}).get_text() if product.find("span", {"class": "Y1HWO0"}) else "No Rating"
-            reviews = product.find("span", {"class": "hG7V+4"}).get_text() if product.find("span", {"class": "hG7V+4"}) else "No Reviews"
-
-            specs_list = []
-            product_specs = product.find("ul", {"class": "G4BRas"})
-            if product_specs:
-                specs_list = [li.get_text(strip=True) for li in product_specs.find_all("li") if li.get_text(strip=True)]
-
-            product_data.append({
-                "title": title,
-                "price": price,
-                "specs": specs_list,
-                "url": full_link,
-                "image": product_image,
-                "discount": discount,
-                "rating": rating,
-                "reviews": reviews
+            products_data.append({
+                "title": product_title.get_text(strip=True) if product_title else "No Title",
+                "link": "https://www.flipkart.com" + product_link["href"] if product_link else "No Link",
+                "image": product_image["src"] if product_image else "No Image",
+                "price": product_price.get_text(strip=True) if product_price else "No Price",
+                "discount": product_discount.get_text(strip=True) if product_discount else "No Discount",
+                "rating": product_rating.get_text(strip=True) if product_rating else "No Rating",
+                "reviews": product_reviews.get_text(strip=True) if product_reviews else "No Reviews",
+                "specifications": [li.get_text(strip=True) for li in product_specs.find_all("li")] if product_specs else []
             })
 
-            if len(product_data) >= max_products:
-                break
+    # 👗👚 Fashion category (like dresses, shirts, sarees)
+    elif any(keyword in query_lower for keyword in ["dress", "shirt", "jeans", "kurti", "saree", "clothing", "tshirt", "top"]):
+        product_containers = soup.find_all("div", class_="_1sdMkc")
+        for product in product_containers:
+            product_link = product.find("a", class_="rPDeLR")
+            product_image = product.find("img", class_="_53J4C-")
+            product_title = product.find("a", class_="WKTcLC")
+            product_brand = product.find("div", class_="syl9yP")
+            product_price = product.find("div", class_="Nx9bqj")
+            product_discount = product.find("div", class_="UkUFwK")
+            product_sizes = product.find("div", class_="OCRRMR")
 
-        return product_data
+            products_data.append({
+                "title": product_title.get_text(strip=True) if product_title else "No Title",
+                "brand": product_brand.get_text(strip=True) if product_brand else "No Brand",
+                "link": "https://www.flipkart.com" + product_link["href"] if product_link else "No Link",
+                "image": product_image["src"] if product_image else "No Image",
+                "price": product_price.get_text(strip=True) if product_price else "No Price",
+                "discount": product_discount.get_text(strip=True) if product_discount else "No Discount",
+                "rating": "N/A",
+                "reviews": "N/A",
+                "specifications": [product_sizes.get_text(strip=True).replace("Size", "").strip()] if product_sizes else []
+            })
 
-    except Exception as e:
-        logger.error(f"Scraping error: {e}")
-        return []
+    # 🪑 Furniture or other (fallback)
+    else:
+        product_containers = soup.find_all("div", class_="tUxRFH") or soup.find_all("div", class_="_1sdMkc")
+        for product in product_containers:
+            title = product.find("div", class_="KzDlHZ") or product.find("a", class_="WKTcLC")
+            image = product.find("img")
+            price = product.find("div", class_="Nx9bqj")
+            link = product.find("a", href=True)
+
+            products_data.append({
+                "title": title.get_text(strip=True) if title else "No Title",
+                "image": image["src"] if image else "No Image",
+                "link": "https://www.flipkart.com" + link["href"] if link else "No Link",
+                "price": price.get_text(strip=True) if price else "No Price",
+                "rating": "N/A",
+                "discount": "N/A",
+                "reviews": "N/A",
+                "specifications": []
+            })
+
+    return products_data
+
+
+@app.route("/", methods=["GET", "POST"])
+def index():
+    query = request.form.get("query") if request.method == "POST" else "smartphone"
+    products = scrape_flipkart_products(query)
+    return render_template("index.html", products=products, query=query)
+@app.route("/recommend", methods=["POST"])
+def recommend():
+    data = request.json
+    products = data["products"]
+    preference = data.get("preference", "Recommend the best products overall.")
+
+    prompt = (
+    f"You are an expert Flipkart product recommender. The user says: '{preference}'\n\n"
+    "Here are some products scraped from Flipkart:\n\n"
+    + "\n\n".join([
+        f"Product: {p['title']}\nPrice: {p['price']}\nRating: {p['rating']}\nSpecs: {', '.join(p['specifications'])}\nLink: {p['link']}"
+        for p in products
+    ]) +
+    "\n\nRecommend the top 3 products that match the user's preference with clear reasoning.\n"
+    "Output can use markdown for formatting."
+)
+
+
+    response = model.generate_content(prompt)
+    raw_text = response.text.strip()
+    cleaned_html = preprocess_markdown(raw_text)
+
+    return jsonify({"recommendation": cleaned_html})
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
