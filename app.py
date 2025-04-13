@@ -4,12 +4,13 @@ import requests
 import google.generativeai as genai
 import os
 import re
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 app = Flask(__name__)
 
-# Configure Gemini API
-genai.configure(api_key=os.getenv("API_KEY"))
+# # Configure Gemini API
+# genai.configure(api_key=os.getenv("API_KEY"))
+genai.configure(api_key=os.getenv("AIzaSyCim0N6_iy6cGMKGDTK_ESF0EAGvBAOB6Y"))
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 
