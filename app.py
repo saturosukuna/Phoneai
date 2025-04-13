@@ -4,7 +4,8 @@ import requests
 import google.generativeai as genai
 import os
 import re
-
+from dotenv import load_dotenv
+load_dotenv()
 app = Flask(__name__)
 
 # Configure Gemini API
